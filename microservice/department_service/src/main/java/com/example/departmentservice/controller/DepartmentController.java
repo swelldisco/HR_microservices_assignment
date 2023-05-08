@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.departmentservice.dto.DepartmentDto;
@@ -34,16 +35,16 @@ public class DepartmentController {
     }
 
     // get a department by its name as a path variable
-    // http://127.0.0.1:8080/api/departments/IT
-    @GetMapping("/{name}")
-    public ResponseEntity<DepartmentDto> getDepartmentByName(@PathVariable("name") String departmentName) {
+    // http://127.0.0.1:8080/api/departments/name?departmentName=Engineering
+    @GetMapping("/name")
+    public ResponseEntity<DepartmentDto> getDepartmentByName(@RequestParam String departmentName) {
         return new ResponseEntity<>(departmentService.getDepartmentByName(departmentName), HttpStatus.OK);
     }
 
     // get a department by its department code as a path variable
-    // http://127.0.0.1:8080/api/departments/ABC001
-    @GetMapping("/{code}")
-    public ResponseEntity<DepartmentDto> getDepartmentByCode(@PathVariable("code") String departmentCode) {
+    // http://127.0.0.1:8080/api/departments/code?departmentCode=SALES
+    @GetMapping("/code")
+    public ResponseEntity<DepartmentDto> getDepartmentByCode(@RequestParam String departmentCode) {
         return new ResponseEntity<>(departmentService.getDepartmentByCode(departmentCode), HttpStatus.OK);
     }
 
