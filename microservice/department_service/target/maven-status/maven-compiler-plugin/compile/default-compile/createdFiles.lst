@@ -1,0 +1,11 @@
+com\example\departmentservice\controller\DepartmentController.class
+com\example\departmentservice\dto\DepartmentDto.class
+com\example\departmentservice\exception\DepartmentNotFoundException.class
+com\example\departmentservice\service\DepartmentService.class
+com\example\departmentservice\exception\ErrorDetails.class
+com\example\departmentservice\DepartmentServiceApplication.class
+com\example\departmentservice\repository\DepartmentRepository.class
+com\example\departmentservice\exception\DepartmentExceptionHandler.class
+com\example\departmentservice\exception\RepositoryEmptyException.class
+com\example\departmentservice\service\implementation\DepartmentServiceImpl.class
+com\example\departmentservice\entity\Department.class
